@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+/* ================================
+   ALEGREYA — Headings (serif)
+   ================================ */
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/fonts/Alegreya/Alegreya-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  src: url('/fonts/Alegreya/Alegreya-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ================================
+   ALEGREYA SANS — Body text
+   ================================ */
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/fonts/Alegreya_Sans/AlegreyaSans-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ================================
+   GLOBAL STYLES
+   ================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #080810;
+  color: #f0f0ff;
+  font-family: 'Alegreya Sans', system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alegreya', Georgia, serif;
+}
+
+p, span, label, input, select, textarea, button, a {
+  font-family: 'Alegreya Sans', system-ui, sans-serif;
+}
+
+input, select, textarea {
+  background: #16162a;
+  border: 0.5px solid #ffffff22;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #f0f0ff;
+  width: 100%;
+  outline: none;
+}
+
+input::placeholder {
+  color: #404060;
+}
+
+input:focus, select:focus {
+  border-color: #6c5ce7;
+}
+
+select option {
+  background: #16162a;
+}
