@@ -3,6 +3,7 @@
 import { signInWithGitHub, signInWithEmail, signUpWithEmail } from '@/app/login/actions'
 import { useState } from 'react'
 import { useSearchParams } from 'next/navigation'
+import NextLink from 'next/link'
 
 export default function LoginCard() {
   const [mode, setMode] = useState<'signin' | 'signup'>('signin')
@@ -20,22 +21,45 @@ export default function LoginCard() {
       overflow: 'hidden',
     }}>
 
-      {/* Background image */}
-      <div style={{
-        position: 'fixed', inset: 0,
-        backgroundImage: 'url(/calvin.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        zIndex: 0,
-      }} />
+      {/* Background — absolute avoids mobile fixed-position jitter */}
+      <div aria-hidden style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
+        <div style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: 'url(/calvin.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }} />
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'rgba(255, 235, 220, 0.15)',
+        }} />
+      </div>
 
-      {/* Light overlay */}
-      <div style={{
-        position: 'fixed', inset: 0,
-        background: 'rgba(255, 235, 220, 0.15)',
-        zIndex: 1,
-      }} />
+      <NextLink
+        href="/"
+        style={{
+          position: 'absolute',
+          top: 16,
+          left: 16,
+          zIndex: 20,
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 6,
+          fontSize: 13,
+          fontWeight: 500,
+          padding: '8px 14px',
+          background: '#ffffff44',
+          border: '1px solid #ffffff66',
+          borderRadius: 8,
+          color: '#3d1f0a',
+          textDecoration: 'none',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+        }}
+      >
+        ← Back to home
+      </NextLink>
 
       {/* Glass card */}
       <div style={{

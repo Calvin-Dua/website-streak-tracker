@@ -37,12 +37,14 @@ export default async function DashboardPage() {
   const bestStreak = Math.max(...goalsWithStats.map(g => g.currentStreak), 0)
 
   return (
-    <main style={{ minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
+    <main style={{ minHeight: '100vh', position: 'relative', overflowX: 'hidden' }}>
 
-      {/* Sunset background */}
-      <div style={{ position: 'fixed', inset: 0, background: 'linear-gradient(180deg, #9b8ec4 0%, #b8a0c8 20%, #c9a8b8 40%, #d4a090 60%, #e0a878 80%, #e8b86d 100%)', zIndex: 0 }} />
-      <div style={{ position: 'fixed', inset: 0, background: 'radial-gradient(ellipse at 30% 80%, #f0c070aa 0%, transparent 50%)', zIndex: 1 }} />
-      <div style={{ position: 'fixed', inset: 0, background: 'radial-gradient(ellipse at 70% 10%, #9b8ec455 0%, transparent 50%)', zIndex: 1 }} />
+      {/* Sunset background — absolute avoids mobile fixed-position jitter on scroll */}
+      <div aria-hidden style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', minHeight: '100%' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, #9b8ec4 0%, #b8a0c8 20%, #c9a8b8 40%, #d4a090 60%, #e0a878 80%, #e8b86d 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 30% 80%, #f0c070aa 0%, transparent 50%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 70% 10%, #9b8ec455 0%, transparent 50%)' }} />
+      </div>
 
       <div style={{ position: 'relative', zIndex: 10 }}>
 

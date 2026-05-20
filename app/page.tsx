@@ -8,7 +8,7 @@ export default async function Home() {
   if (user) redirect('/dashboard')
 
   return (
-    <main style={{ minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
+    <main style={{ minHeight: '100vh', position: 'relative', overflowX: 'hidden' }}>
 
       {/* Responsive styles */}
       <style>{`
@@ -86,16 +86,18 @@ export default async function Home() {
         }
       `}</style>
 
-      {/* Background layers */}
-      <div style={{ position: 'fixed', inset: 0, background: '#d4936a', zIndex: 0 }} />
-      <div style={{ position: 'fixed', inset: 0, background: 'radial-gradient(ellipse at 0% 50%, #c1734488 0%, transparent 55%)', zIndex: 1 }} />
-      <div style={{ position: 'fixed', inset: 0, background: 'radial-gradient(ellipse at 100% 0%, #c8845aaa 0%, transparent 50%)', zIndex: 1 }} />
-      <div style={{ position: 'fixed', inset: 0, background: 'radial-gradient(ellipse at 40% 30%, #e8d5c4dd 0%, transparent 45%)', zIndex: 1 }} />
-      <div style={{ position: 'fixed', inset: 0, background: 'radial-gradient(ellipse at 70% 80%, #dfc4aacc 0%, transparent 40%)', zIndex: 1 }} />
-      <div style={{ position: 'fixed', inset: 0, background: 'radial-gradient(ellipse at 20% 80%, #b5d0d8bb 0%, transparent 35%)', zIndex: 1 }} />
-      <div style={{ position: 'fixed', top: '5%', left: '30%', width: 130, height: 130, background: '#c1734455', borderRadius: '50% 40% 60% 45%', transform: 'rotate(-20deg)', zIndex: 1 }} />
-      <div style={{ position: 'fixed', bottom: '-5%', right: '-3%', width: 280, height: 280, background: '#c8845a44', borderRadius: '50% 60% 40% 55%', zIndex: 1 }} />
-      <div style={{ position: 'fixed', top: '-5%', left: '-5%', width: 200, height: 200, background: '#c1734433', borderRadius: '40% 60% 55% 45%', zIndex: 1 }} />
+      {/* Background layers — absolute avoids mobile fixed-position jitter on scroll */}
+      <div aria-hidden style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', minHeight: '100%' }}>
+        <div style={{ position: 'absolute', inset: 0, background: '#d4936a' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 0% 50%, #c1734488 0%, transparent 55%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 100% 0%, #c8845aaa 0%, transparent 50%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 40% 30%, #e8d5c4dd 0%, transparent 45%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 70% 80%, #dfc4aacc 0%, transparent 40%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 80%, #b5d0d8bb 0%, transparent 35%)' }} />
+        <div style={{ position: 'absolute', top: '5%', left: '30%', width: 130, height: 130, background: '#c1734455', borderRadius: '50% 40% 60% 45%', transform: 'rotate(-20deg)' }} />
+        <div style={{ position: 'absolute', bottom: '-5%', right: '-3%', width: 280, height: 280, background: '#c8845a44', borderRadius: '50% 60% 40% 55%' }} />
+        <div style={{ position: 'absolute', top: '-5%', left: '-5%', width: 200, height: 200, background: '#c1734433', borderRadius: '40% 60% 55% 45%' }} />
+      </div>
 
       <div style={{ position: 'relative', zIndex: 10 }}>
 
