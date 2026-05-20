@@ -4,6 +4,7 @@ export type Goal = {
   website_url: string
   website_name: string
   target_days: number
+  reminder_time: string | null
   created_at: string
 }
 

@@ -149,7 +149,36 @@ export default function GoalForm() {
               <option value="100">100</option>
             </select>
           </div>
-
+{/* Reminder time */}
+<div>
+            <label style={{ fontSize: 14, color: '#6a4a7a', display: 'block', marginBottom: 6 }}>
+              Daily reminder
+            </label>
+            <select
+              name="reminder_time"
+              style={{
+                width: '100%', padding: '10px 14px',
+                background: '#ffffff28',
+                border: '1px solid #ffffff55',
+                borderRadius: 9, fontSize: 14,
+                color: '#2d1a3a', outline: 'none',
+              }}
+            >
+              <option value="">No reminder</option>
+              <option value="07:00">7:00 AM</option>
+              <option value="08:00">8:00 AM</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="17:00">5:00 PM</option>
+              <option value="18:00">6:00 PM</option>
+              <option value="19:00">7:00 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="21:00">9:00 PM</option>
+              <option value="22:00">10:00 PM</option>
+            </select>
+          </div>
           {error && (
             <p style={{ fontSize: 12, color: '#c17344' }}>{error}</p>
           )}

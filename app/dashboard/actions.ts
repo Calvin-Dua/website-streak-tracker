@@ -17,8 +17,8 @@ export async function createGoal(formData: FormData) {
   const website_url = formData.get('website_url') as string
   const website_name = formData.get('website_name') as string
   const target_days = parseInt(formData.get('target_days') as string)
+  const reminder_time = formData.get('reminder_time') as string || null
 
-  // Basic validation
   if (!website_url || !website_name || !target_days) {
     return { error: 'All fields are required' }
   }
@@ -28,6 +28,7 @@ export async function createGoal(formData: FormData) {
     website_url,
     website_name,
     target_days,
+    reminder_time: reminder_time || null,
   })
 
   if (error) {
@@ -56,7 +57,6 @@ export async function logVisit(goalId: string) {
   })
 
   if (error) {
-    // unique constraint violation — already logged today
     if (error.code === '23505') {
       return { error: 'Already logged today' }
     }
