@@ -48,7 +48,6 @@ export default function GoalForm() {
       WebkitBackdropFilter: 'blur(4px)',
     }}>
       <div style={{
-        <div style={{
           background: 'linear-gradient(135deg, #ffffff38 0%, #ffffff22 100%)',
           border: '1px solid #ffffff66',
           borderRadius: 16,
@@ -61,7 +60,6 @@ export default function GoalForm() {
           boxShadow: '0 8px 32px #00000022, 0 1px 0 #ffffff55 inset',
           margin: '0 16px',
         }}>
-      }}>
 
         {/* Header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 22 }}>
