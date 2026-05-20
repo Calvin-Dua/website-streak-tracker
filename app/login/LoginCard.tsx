@@ -58,7 +58,7 @@ export default function LoginCard() {
           WebkitBackdropFilter: 'blur(8px)',
         }}
       >
-        ← Back to home
+        Back to Home
       </NextLink>
 
       {/* Glass card */}
