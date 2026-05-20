@@ -44,13 +44,12 @@ export default async function DashboardPage() {
       <div style={{ position: 'fixed', inset: 0, background: 'radial-gradient(ellipse at 30% 80%, #f0c070aa 0%, transparent 50%)', zIndex: 1 }} />
       <div style={{ position: 'fixed', inset: 0, background: 'radial-gradient(ellipse at 70% 10%, #9b8ec455 0%, transparent 50%)', zIndex: 1 }} />
 
-      {/* Content */}
       <div style={{ position: 'relative', zIndex: 10 }}>
 
         {/* Navbar */}
         <nav style={{
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: '14px 28px',
+          padding: '14px 20px',
           background: '#ffffff18',
           borderBottom: '1px solid #ffffff33',
           backdropFilter: 'blur(16px)',
@@ -66,22 +65,25 @@ export default async function DashboardPage() {
             }}>🔥</div>
             <span style={{ fontSize: 15, fontWeight: 500, color: '#2d1a3a' }}>Streakly</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             {bestStreak > 0 && (
               <div style={{
                 display: 'inline-flex', alignItems: 'center', gap: 5,
                 fontSize: 12, fontWeight: 500,
                 background: '#e8845a22', color: '#8a3a10',
                 border: '1px solid #e8845a55',
-                borderRadius: 99, padding: '3px 12px',
+                borderRadius: 99, padding: '3px 10px',
               }}>
                 🔥 {bestStreak} day streak
               </div>
             )}
-            <span style={{ fontSize: 12, color: '#4a2a5a' }}>{user.email}</span>
+            {/* Hide email on mobile */}
+            <span className="hide-mobile" style={{ fontSize: 12, color: '#4a2a5a' }}>
+              {user.email}
+            </span>
             <form action={signOut}>
               <button type="submit" style={{
-                fontSize: 12, padding: '6px 16px', borderRadius: 8,
+                fontSize: 12, padding: '6px 14px', borderRadius: 8,
                 background: '#ffffff28', color: '#2d1a3a',
                 border: '1px solid #ffffff44', cursor: 'pointer',
                 backdropFilter: 'blur(8px)',
@@ -93,18 +95,21 @@ export default async function DashboardPage() {
         </nav>
 
         {/* Main content */}
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '28px 28px' }}>
+        <div style={{
+          maxWidth: 1100, margin: '0 auto',
+          padding: '20px 16px',
+        }}>
 
           {/* Header */}
           <div style={{
             display: 'flex', alignItems: 'flex-start',
-            justifyContent: 'space-between', marginBottom: 24,
+            justifyContent: 'space-between', marginBottom: 20,
           }}>
             <div>
-              <h1 style={{ fontSize: 26, fontWeight: 700, color: '#2d1a3a' }}>
+              <h1 style={{ fontSize: 24, fontWeight: 500, color: '#2d1a3a' }}>
                 My Goals
               </h1>
-              <p style={{ fontSize: 15, fontWeight: 500, color: '#6a4a7a', marginTop: 4 }}>
+              <p style={{ fontSize: 15, color: '#6a4a7a', marginTop: 4 }}>
                 Track your daily website visits
               </p>
             </div>
@@ -120,8 +125,8 @@ export default async function DashboardPage() {
           ) : (
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(440px, 1fr))',
-              gap: 16,
+              gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 440px), 1fr))',
+              gap: 14,
             }}>
               {goalsWithStats.map(goal => (
                 <GoalCard key={goal.id} goal={goal} />

@@ -39,8 +39,12 @@ export default function LoginCard() {
 
       {/* Glass card */}
       <div style={{
+        <div style={{
         position: 'relative', zIndex: 10,
-        width: 400, padding: '44px 40px',
+        width: '100%',
+        maxWidth: 400,
+        margin: '0 16px',
+        padding: '36px 24px',
         borderRadius: 24,
         background: 'linear-gradient(135deg, #ffffff55 0%, #ffffff33 100%)',
         backdropFilter: 'blur(28px)',

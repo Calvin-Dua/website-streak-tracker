@@ -48,13 +48,19 @@ export default function GoalForm() {
       WebkitBackdropFilter: 'blur(4px)',
     }}>
       <div style={{
-        background: 'linear-gradient(135deg, #ffffff38 0%, #ffffff22 100%)',
-        border: '1px solid #ffffff66',
-        borderRadius: 16, padding: '28px 32px',
-        width: 440, position: 'relative',
-        backdropFilter: 'blur(24px)',
-        WebkitBackdropFilter: 'blur(24px)',
-        boxShadow: '0 8px 32px #00000022, 0 1px 0 #ffffff55 inset',
+        <div style={{
+          background: 'linear-gradient(135deg, #ffffff38 0%, #ffffff22 100%)',
+          border: '1px solid #ffffff66',
+          borderRadius: 16,
+          padding: '24px 20px',
+          width: '100%',
+          maxWidth: 440,
+          position: 'relative',
+          backdropFilter: 'blur(24px)',
+          WebkitBackdropFilter: 'blur(24px)',
+          boxShadow: '0 8px 32px #00000022, 0 1px 0 #ffffff55 inset',
+          margin: '0 16px',
+        }}>
       }}>
 
         {/* Header */}

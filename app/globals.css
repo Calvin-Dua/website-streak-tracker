@@ -177,3 +177,21 @@ input:focus, select:focus {
 select option {
   background: #16162a;
 }
+
+/* ================================
+   RESPONSIVE UTILITIES
+   ================================ */
+
+/* Hide on mobile */
+@media (max-width: 640px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Hide on desktop */
+@media (min-width: 641px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
