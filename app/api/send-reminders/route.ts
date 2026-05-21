@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
-export async function POST(request: Request) {
+export async function GET(request: Request) {
 
   // Security check
   const authHeader = request.headers.get('authorization')
@@ -125,6 +125,6 @@ export async function POST(request: Request) {
     success: true,
     sent: results.length,
     results,
-    currentHour,
+    message: 'Test Mode',
   })
 }
