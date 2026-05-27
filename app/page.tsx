@@ -11,7 +11,13 @@ export default async function Home() {
   return (
     <main
       className="landing-page"
-      style={{ position: 'relative', overflowX: 'hidden' }}
+      style={{
+        position: 'relative',
+        overflowX: 'hidden',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
     >
 
       {/* Responsive styles */}
@@ -107,7 +113,13 @@ export default async function Home() {
         <div style={{ position: 'absolute', top: '-5%', left: '-5%', width: 200, height: 200, background: '#c1734433', borderRadius: '40% 60% 55% 45%' }} />
       </div>
 
-      <div style={{ position: 'relative', zIndex: 1 }}>
+      <div style={{
+        position: 'relative',
+        zIndex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        flexGrow: 1,
+      }}>
 
         {/* Navbar */}
         <nav style={{
