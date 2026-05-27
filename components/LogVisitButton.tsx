@@ -40,7 +40,7 @@ export default function LogVisitButton({ goalId, visitedToday }: Props) {
 
   return (
     <div>
-      <button onClick={handleClick} disabled={loading} style={{
+      <button onClick={handleClick} disabled={loading} className="btn-tap-glass" style={{
         padding: '5px 14px',
         background: '#ffffff55',
         border: '1px solid #ffffff77',

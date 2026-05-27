@@ -195,3 +195,17 @@ select option {
     display: none !important;
   }
 }
+
+
+/* Add this at the bottom of the file */
+@utility btn-tap-base {
+  @apply transition-all duration-75 ease-out active:scale-95;
+}
+
+@utility btn-tap-glass {
+  @apply btn-tap-base active:bg-white/20;
+}
+
+@utility btn-tap-dark {
+  @apply btn-tap-base active:bg-zinc-800 active:shadow-sm;
+}

@@ -77,7 +77,7 @@ export default function GoalCard({ goal }: Props) {
     }}>
 
       {/* Delete button */}
-      <button onClick={handleDelete} style={{
+      <button onClick={handleDelete} className="btn-tap-base active:bg-black/10" style={{
         position: 'absolute', top: 14, right: 16,
         background: 'none', border: 'none',
         color: '#00000030', cursor: 'pointer',

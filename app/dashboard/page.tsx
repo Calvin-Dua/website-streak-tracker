@@ -84,7 +84,7 @@ export default async function DashboardPage() {
               {user.email}
             </span>
             <form action={signOut}>
-              <button type="submit" style={{
+              <button type="submit" className="btn-tap-glass" style={{
                 fontSize: 12, padding: '6px 14px', borderRadius: 8,
                 background: '#ffffff28', color: '#2d1a3a',
                 border: '1px solid #ffffff44', cursor: 'pointer',

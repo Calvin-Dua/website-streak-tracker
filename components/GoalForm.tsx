@@ -22,7 +22,7 @@ export default function GoalForm() {
 
   if (!isOpen) {
     return (
-      <button onClick={() => setIsOpen(true)} style={{
+      <button onClick={() => setIsOpen(true)} className="btn-tap-glass" style={{
         display: 'flex', alignItems: 'center', gap: 8,
         fontSize: 13, fontWeight: 500, padding: '9px 20px',
         borderRadius: 9,
@@ -69,7 +69,7 @@ export default function GoalForm() {
             <h2 style={{ fontSize: 19, fontWeight: 500, color: '#2d1a3a' }}>Create new goal</h2>
             <p style={{ fontSize: 15, color: '#6a4a7a', marginTop: 3 }}>Add a website to track daily</p>
           </div>
-          <button onClick={() => setIsOpen(false)} style={{
+          <button onClick={() => setIsOpen(false)} className="btn-tap-base active:bg-white/10" style={{
             background: 'none', border: 'none', color: '#2d1a3a',
             cursor: 'pointer', fontSize: 20, lineHeight: 1,
           }}>×</button>
@@ -191,14 +191,14 @@ export default function GoalForm() {
 
           {/* Buttons */}
           <div style={{ display: 'flex', gap: 10, justifyContent: 'flex-end', marginTop: 4 }}>
-            <button type="button" onClick={() => setIsOpen(false)} style={{
+            <button type="button" onClick={() => setIsOpen(false)} className="btn-tap-glass" style={{
               fontSize: 13, padding: '9px 20px', borderRadius: 8,
               background: '#ffffff28', color: '#2d1a3a',
               border: '1px solid #ffffff44', cursor: 'pointer',
             }}>
               Cancel
             </button>
-            <button type="submit" disabled={loading} style={{
+            <button type="submit" disabled={loading} className="btn-tap-base active:bg-purple-800" style={{
               fontSize: 13, fontWeight: 500, padding: '9px 20px', borderRadius: 8,
               background: 'linear-gradient(135deg,#c9a0dc,#9b6ec4)',
               color: '#fff', border: 'none', cursor: 'pointer',

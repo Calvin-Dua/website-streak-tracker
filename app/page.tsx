@@ -193,7 +193,7 @@ export default async function Home() {
             }}>
               🐙 Start with GitHub — it&apos;s free
             </Link>
-            <button style={{
+            <button className="btn-tap-glass" style={{
               fontSize: 14, padding: '12px 28px', borderRadius: 10,
               background: '#ffffff44', color: '#3d1f0a',
               border: '1px solid #ffffff66', cursor: 'pointer',

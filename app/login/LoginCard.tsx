@@ -185,6 +185,7 @@ export default function LoginCard() {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
+                className="btn-tap-base active:bg-white/10"
                 style={{
                   position: 'absolute', right: 14,
                   top: '50%', transform: 'translateY(-50%)',
@@ -214,7 +215,7 @@ export default function LoginCard() {
           </div>
 
           {/* Submit button */}
-          <button type="submit" style={{
+          <button type="submit" className="btn-tap-base active:bg-orange-700" style={{
             width: '100%', padding: '12px',
             background: 'linear-gradient(135deg, #e8845a, #c17344)',
             color: '#fff', fontWeight: 700,
@@ -239,7 +240,7 @@ export default function LoginCard() {
 
         {/* GitHub button */}
         <form action={signInWithGitHub} style={{ marginBottom: 24 }}>
-          <button type="submit" style={{
+          <button type="submit" className="btn-tap-glass" style={{
             width: '100%', padding: '11px',
             background: '#ffffff55',
             border: '1px solid #ffffff66',
