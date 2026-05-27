@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <main
       className="landing-page"
-      style={{ position: 'relative', overflowX: 'visible' }}
+      style={{ position: 'relative', overflowX: 'hidden' }}
     >
 
       {/* Responsive styles */}
