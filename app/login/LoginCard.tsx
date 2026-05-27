@@ -38,6 +38,7 @@ export default function LoginCard() {
 
       <NextLink
         href="/"
+        className="btn-tap-glass"
         style={{
           position: 'absolute',
           top: 16,
