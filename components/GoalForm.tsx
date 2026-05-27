@@ -146,7 +146,7 @@ export default function GoalForm() {
                 </label>
               ))}
             </div>
-            <select name="target_days" defaultValue="30" style={{ display: 'none' }}>
+            <select className="btn-tap-glass" name="target_days" defaultValue="30" style={{ display: 'none' }}>
               <option value="7">7</option>
               <option value="14">14</option>
               <option value="30">30</option>

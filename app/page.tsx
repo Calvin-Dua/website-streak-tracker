@@ -1,5 +1,6 @@
 import { createClient } from '@/utils/supabase/server'
 import { redirect } from 'next/navigation'
+import ScrollButton from '@/components/ScrollButton'
 import Link from 'next/link'
 
 export default async function Home() {
@@ -193,14 +194,9 @@ export default async function Home() {
             }}>
               🐙 Start with GitHub — it&apos;s free
             </Link>
-            <button className="btn-tap-glass" style={{
-              fontSize: 14, padding: '12px 28px', borderRadius: 10,
-              background: '#ffffff44', color: '#3d1f0a',
-              border: '1px solid #ffffff66', cursor: 'pointer',
-              backdropFilter: 'blur(8px)',
-            }}>
-              See how it works
-            </button>
+
+            
+            <ScrollButton />
           </div>
 
           {/* Mini heatmap */}
@@ -260,7 +256,7 @@ export default async function Home() {
         </section>
 
         {/* How it works */}
-        <section style={{ padding: '48px 20px', borderTop: '1px solid #ffffff33' }}>
+        <section id="how it works" style={{ padding: '48px 20px', borderTop: '1px solid #ffffff33' }}>
           <p style={{
             fontSize: 11, fontWeight: 500, color: '#7a4a2e88',
             textTransform: 'uppercase', letterSpacing: '0.08em',
