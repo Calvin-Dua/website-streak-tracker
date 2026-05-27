@@ -256,7 +256,7 @@ export default async function Home() {
         </section>
 
         {/* How it works */}
-        <section id="how it works" style={{ padding: '48px 20px', borderTop: '1px solid #ffffff33' }}>
+        <section id="how-it-works" style={{ padding: '48px 20px', borderTop: '1px solid #ffffff33' }}>
           <p style={{
             fontSize: 11, fontWeight: 500, color: '#7a4a2e88',
             textTransform: 'uppercase', letterSpacing: '0.08em',
