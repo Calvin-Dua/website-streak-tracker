@@ -377,6 +377,7 @@ export default async function Home() {
 
         {/* Footer */}
         <footer style={{
+          marginTop: 'auto',
           padding: '18px 20px',
           borderTop: '1px solid #ffffff33',
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
