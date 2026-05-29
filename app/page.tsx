@@ -119,6 +119,7 @@ export default async function Home() {
         display: 'flex',
         flexDirection: 'column',
         flexGrow: 1,
+        minHeight: '100vh'
       }}>
 
         {/* Navbar */}
